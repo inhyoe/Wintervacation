@@ -20,7 +20,7 @@ console.log(obj);
 
 // 객체 메서드
 
-const user = {
+const user1 = {
     name : 'Mike',
     age : 30
 };
@@ -32,8 +32,8 @@ const user = {
 
 //개선하기 위해선
 
-const user2 = Object.assign({},user); // 초기값에  {} 빈객체에 , user를 넣는다 .
+const user2 = Object.assign({},user1); // 초기값에  {} 빈객체에 , user를 넣는다 .
 user2.name = 'Tom';
-console.log(user);
+console.log(user1);
 console.log(user2)
 
