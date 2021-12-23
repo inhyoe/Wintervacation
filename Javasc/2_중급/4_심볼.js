@@ -22,17 +22,17 @@ console.log(id)
 console.log(id2)
 
 const id3 = Symbol('id3');
-const user = {
+const user1 = {
     name : 'Mike',
     age : '30',
     [id3] : 'myid' // computed property key
 };
-console.log(user)
-console.log(user[id3])
-console.log(Object.keys(user)) // id3를 건너뜀.
-Object.values(user)
-console.log(Object.entries(user)) // 키가 심볼형이면 건너뜀.
-for( let a in user){} // 또한 건너뜀
+console.log(user1)
+console.log(user1[id3])
+console.log(Object.keys(user1)) // id3를 건너뜀.
+Object.values(user1)
+console.log(Object.entries(user1)) // 키가 심볼형이면 건너뜀.
+for( let a in user1){} // 또한 건너뜀
 
 // 그럼 어디서 쓰나?
 
