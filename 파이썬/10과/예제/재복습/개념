@@ -1,0 +1,38 @@
+4. 넘파이 Nurmerical Python
+- numpy
+- 차원 : 축(axis)의 정수
+- index 사용
+ - 인덱싱 , 슬라이싱 기능
+ - 논라적 안댕=ㄱ상 초라
+ - 넘파이 스타일 : [행,열 ] ---> [low,colomn]
+
+ ndarray 객체
+  - n demension array
+  - n 차원 배열
+  - 속성 : p.253
+  - 메소드 : 
+  - 동일한 데이터 타입의 데이터만 저장가능'
+    속성 p.253
+    
+
+ 3. 용어
+  - Scalar : 단독 데이터
+  - Vector: 1차원 배열,1차원 텐서, list
+  - Martix: 2차원 배열,2차원 텐서
+  - Tensor: 3차원 일상 배열
+
+  4. 범위 지정 난수 생성
+  - Start ~ stop
+   - stop-start * np.random.rand 갯수 + start
+  
+  5. 정규분포를 따르는 변수 생성
+   - mu : vudrbs
+   - sigma : 표준 편차
+   mu +sigma * np.random.randn(x,y)
+
+  6. 평균과 중앙값 계싼하기
+   mean : 평균
+   median : 중간값
+
+  7. 상관관계 계산하기(correlation coefficient)
+  - corrcoef

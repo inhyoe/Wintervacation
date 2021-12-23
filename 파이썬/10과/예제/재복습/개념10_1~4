@@ -1,0 +1,21 @@
+넘파이와 리스트 배열의 차이점.
+
+mid_scores = [ 10,20,30 ] 
+Final_scores = [70, 80, 90] 일 때 , 총점이라는 리스트를 만들고 싶다.
+리스트의 경우
+mid_scores + Final_scores = [ 10,20,30,70,80,90 ]이 출력되기 때문에
+
+넘파이를 이용할 경우
+import numpy as np
+
+mid_scores = np.array([10,20,30])
+Final_scores = np.array([60,70,80])
+mid_scores + Final_scores = [=70,90,110] 이 출력된다.
+
+메소드들
+a = np.array([1,2,3])
+a.shape = 3 # 1차원 배열이 3개이다
+a.ndim = 1 # 객체의 차원은 1차원이다.
+a.dtype = dtype(int32)# 객체의 내부 자료형
+a.itemsisze = 4# 객체 내부 자료형이 차지하는 메모리 크기 (byte)
+a.size = 3 # 객체의 전체 크기 

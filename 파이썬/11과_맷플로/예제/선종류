@@ -1,0 +1,6 @@
+plt.plot = 직선
+plt.bar = 막대그래프
+plt.pie = 원그래프
+plt.hist = 히스토그램 
+ - 선의 투명정도를 나타내는 함수
+ alpha
