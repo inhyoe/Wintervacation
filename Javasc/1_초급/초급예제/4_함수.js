@@ -6,5 +6,5 @@ function process(game1){
     }
 }
 
-var game = confirm("게임 한판 하실래요?");
+var game = confirm("게임 한판 하실래요?"); // confirm을 써서 true // false를 사용했다.
 process(game);

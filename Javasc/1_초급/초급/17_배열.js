@@ -6,9 +6,7 @@ student[0] = '진정' // student[0]이 진정으로 변함
 //배열은 숫자, 객체,함수 등도 포함가능
 
 let arr = [
-    '민수',
-    3,
-    false,
+    '민수', 3,false,
     {
         name : '민수',
         age : 30,
@@ -16,7 +14,8 @@ let arr = [
     function(){
         console.log('Test')
     }
-]
+] // Object, fucntion또한 한개로 취급 .
+
 // 배열의 길이
 student.length // 30
 
