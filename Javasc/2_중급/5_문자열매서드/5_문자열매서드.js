@@ -51,7 +51,7 @@ console.log(alpha.slice(0,5)); // 'abcde'
 console.log(alpha.slice(2,-2)); // 'cde'
 
 // ===========str.substring(n,m)============ 
-// n과 m사이 문자열을 반환한다 slice와 유사하나 str.substring(m,n) 또한 동작한다!!
+// n과 m사이 문자열을 반환한다 slice와 유사하나 str.substring(m,n) m~n번째 사이 문자열을 반환한다 동작한다!!
 // 음수는 0으로 인식
 console.log('===========str.substring(n,m)============ ') 
 

@@ -27,5 +27,6 @@ function User(name,age){
     }
 } // 붕어빵틀
 let User5 = new User('Tommy',23);
+console.log(User5)
 User5.sayname(); // Tommy
 //this는 생성자의 이름.

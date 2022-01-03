@@ -52,6 +52,7 @@ user.forEach((item,index, arr) => {});
 user.forEach((name,index)=>{
     console.log(`${index+1}. ${name}`);
 })
+console.log(user)
 // 배열을 순서대로 반복한다.
 
 // ============== arr.indexOf / arr.lastIndexOf =============
@@ -128,3 +129,34 @@ let newUserList = userList1.map((user, index) => {
         isAdult : user.age >19    }); // assgin 메서드의 초기값은 처음 값, 두번째느 배열 세번째는 조건식과 들어가는 값들.
 });
 console.log(newUserList);
+console.log(userList1); // 변경되지않음 
+
+// join , split
+console.log('=======================join ,split 사용=======================')
+let arr11 = [ '안녕' , '나는','철수'];
+let result4 = arr11.join(''); // join안이 구분자이고 아무것도 넣지 않았을 때에는 쉼표(,)로 구성. 배열에만 사용 가능 => 문자열
+console.log((result4));
+
+var arr12 = 'Mike,Jane,Tom,Tony';
+var result5 = arr12.split(','); // split은 문자열에만 사용 가능 = > 배열
+
+console.log(result5)
+
+var str = 'Hello, My name is Mike';
+var result5 = str.split(''); // 하나 하나 다 자름.
+console.log(result5)
+
+// Array.isArray() 배열인지 아닌지 확인하기.
+
+let user15 = {
+    name: 'Mike',
+    age: 30
+}
+
+let userlist12 = ['Mike','Tom','Jane'];
+
+console.log(typeof user15)
+console.log(typeof userlist12) // Object형과 리스트는 모두 객체형임
+
+console.log(Array.isArray(user15)) // false
+console.log(Array.isArray(userlist12)) // true
