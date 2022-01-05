@@ -16,7 +16,7 @@ console.log(arr3) // 1,2,34,5,6
 var arr = [1,2,3];
 var arr2 = [...arr];
 
-var user = {name:'Mike',age:30};
+var user = {name:'Mike',age:30}; //Object자료형
 var user2 = {...user}
 user2.name = 'Tom';
 console.log(user.name)

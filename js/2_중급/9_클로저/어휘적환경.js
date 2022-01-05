@@ -19,5 +19,5 @@ console.log(add3(2))     // y 값에 2가 들어가고 5값이 출력됨
 // 이 기능을 클로저 라고 한다.
 
 var add10 = makeAdder(10);
-console.log(add10(5))
+console.log(add10(5)) 
 console.log(add3(1))
