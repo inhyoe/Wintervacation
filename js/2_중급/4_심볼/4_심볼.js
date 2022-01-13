@@ -1,4 +1,4 @@
-const obj = {
+var obj = {
     1 : '1입니다',
     false : '거짓'
 }
@@ -8,21 +8,21 @@ console.log(obj['1']) // 1입니다
 console.log(obj['false']) // 거짓  문자열로도 접근 가능.
 
 // Symbol형
-
-const a = Symbol();
-const b = Symbol();
+console.log('========Symbol========')
+var a = Symbol();
+var b = Symbol();
 console.log(a);
 console.log(b);
-console.log(a==b) // 자료형은 달라도 내용이 다르면 false
+console.log(a==b) // 자료형은 달라도 내용이 같으면 false
 console.log(a===b) // 일치연산자 false
 
-const id = Symbol('id');
-const id2 = Symbol('id2');
+var id = Symbol('id');
+var id2 = Symbol('id2');
 console.log(id)
 console.log(id2)
 
-const id3 = Symbol('id3');
-const user1 = {
+var id3 = Symbol('id3');
+var user1 = {
     name : 'Mike',
     age : '30',
     [id3] : 'myid' // computed property key
@@ -36,12 +36,12 @@ for( let a in user1){} // 또한 건너뜀
 
 // 그럼 어디서 쓰나?
 
-const user2 = {
+var user2 = {
     name : 'Mike',
     age : 30
 } // 일 때
 
-const id7 = Symbol('id');
+var id7 = Symbol('id');
 user2[id7] = 'myid' // 추가할때 사용법 ,
 // 장점 : 객체에 내용을 추가할때 원본을 추가할때 용이함.
 
@@ -52,10 +52,10 @@ user2[id7] = 'myid' // 추가할때 사용법 ,
 // Symbol 함수는 매번 다름 symbol값을 생성하지만
 // Symbol.for 메소드는 하나르 생성한 뒤 키를 통해 같은 Symbol을 공유한다
 
-const id4 = Symbol.for('id4');
-const id5 = Symbol.for('id5');
+var id4 = Symbol.for('id4');
+var id5 = Symbol.for('id5');
 console.log('===========Symbol.for메서드 ===========');
-console.log(id4 === id5) // for 을 사용하지 않을때에 비해 값이 다른 true가 생성된다.
+console.log(id4 == id5) // for 을 사용하지 않을때에 비해 값이 다른 true가 생성된다.
 console.log('===========keyFor메소드===========');
 console.log(Symbol.keyFor(id4)) // 생성할때 만든 값을 알려줌
 // 전역심볼이 아닌 값은 ketFor 사용 불가능. 대신 

@@ -42,6 +42,11 @@ const sayHello = function(name){
 }
 sayHello();
 
+const sayHello = (name)=> {
+    const msg = `Hello, ${name}`;
+    console.log(msg)
+}
+
 // 화살표 함수
 
 const sayHello = (name) =>{
