@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset = 'utf-8'>
+    <title>Dcoument</title>
+    <link rel="stylesheet" href = 'main.css'> 
+     </head>
+<body>
+        <script>
+            //document.getElementById('alert').innerHTML = '??' // error!!
+            // 조작하고싶은 html을 먼저 읽어야 js로 조작이 가능.
+    </script>
+    
+    <div class="alert-box" id = 'alert'>
+        <p>Alert 박스</p>
+        <button onclick="알림창열기('none')">버튼1</button>
+        </div>
+    <button onclick="알림창열기('block')">닫기</button>
+    <script>
+    // <link rel="stylesheet" href = 'main.css'> 
+    // css파일 첨부 완료.
+        
+        function 알림창열기(구멍){
+            document.getElementById('alert').style.display = 구멍;
+        }
+       
+        function plus(){
+            2 + 1
+        }
+        function plus2(){
+            2+ 2
+        } // 이럴 필요가 없다.
+        
+        function plus3(num1,num2){
+            num1 + num2
+        }
+        // 함수의 두번째기능
+        // alert창 두개 만들기.
+        
+    </script>
+    </body>
+</html>
