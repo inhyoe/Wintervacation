@@ -1,0 +1,14 @@
+.alert-box{
+    background-color: rgb(153, 177, 140);
+    color: rgb(94, 17, 219);
+    padding: 20px; /* 테두리와 콘텐츠 사이의 여백을 표현 */
+    border-radius: 5px; 
+    display: none; /* ui를 보여주고 안보여주고  보여주기 : block*/
+}
+.alert2-box{
+    background-color: rgb(153, 177, 140);
+    color: rgb(94, 17, 219);
+    padding: 20px; /* 테두리와 콘텐츠 사이의 여백을 표현 */
+    border-radius: 5px; 
+    display: none; /* ui를 보여주고 안보여주고  보여주기 : block*/
+}

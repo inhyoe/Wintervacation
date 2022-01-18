@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel ='stylesheet' href ='main.css'> <!-- //css파일 첨부하는 방법 -->
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h4 id = 'test'> 안녕하세요 </h4>
+    <script>
+        
+        // document.getElementById('test').innerHTML = '씨발';
+        // == 비슷한 의미
+         //$('#test').html('안녕') // .text도 가능
+         $('#test').css('color','red');
+         $('#test').attr('src','dsddd.jpg')
+         //document.querySelector('#test')
+         // == 비슷한 의미.
+         $('.test1')
+    </script>
+    <!-- jquery를 사용하면 코드량이 줄어듬. -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="alert-box" id = 'alert'>
+        <p id = 'title'>alert 박스</p>
+        <!-- <button onclick ="알림창열기('none')"> X </button> -->
+        <button id = 'close'>X</button> <!-- 코드가 한결 깔끔해짐. -->
+    </div>
+    <button onclick="알림창1열기('아이디 입력하세요')">버튼1</button>
+    <button onclick="알림창1열기('비밀번호 입력하세요')"> 버튼2</button>
+<script>
+   
+   
+   /* onclick을 사용하지 않고 개발 가능 */
+
+   document.getElementById('close').addEventListener('click',function(){
+                    //이 요소가                         클릭되면  function을 실행해주세요~
+    document.getElementById('alert').style.display = 'none';   
+   }) //함수안에 함수를 삽입
+
+   // click도 있고 mouseover도 있고 여러가지가 있다.
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    /*function 알림창1열기(){
+       
+        document.getElementById('title').innerHTML = '아이디입력하세요';
+        
+        document.getElementById('alert').style.display = 'block';
+    }*/
+    
+    /*function 알림창2열기(){
+        document.getElementById('title').innerHTML = '비밀번호입력하세요';
+        document.getElementById('alert').style.display = 'block';
+    }*/
+    function 알림창1열기(잉어){
+        document.getElementById('title').innerHTML = 잉어;
+        document.getElementById('alert').style.display = 'block';
+    }
+    function 알림창열기(구멍){
+        document.getElementById('alert').style.display = 'none';
+    }
+</script>
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ='stylesheet' href ='main.css'>
+
+</head>
+<body>
+    <div class = pig id = pig>
+    <h1>주형이는 똥똥하다</h1>
+    <button onclick="주형이대지('none')"> 때지! </button>
+    </div>
+    <button onclick="주형이대지('block')">똥때지!</button>
+    <script>
+        function 주형이대지(what){
+            document.getElementById('pig').style.display = what
+        }
+        
+    </script>
+</body>
+</html>
