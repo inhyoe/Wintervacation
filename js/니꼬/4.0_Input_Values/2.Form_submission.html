@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>whatFile1</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+<form id = 'login-form'>
+	<div >
+	<input required maxlength="15" value = '1233123' type="text" placeholder = 'What is your name?'
+	/
+	>
+	<input type="submit" value = "Log In"/>
+	<button>Log In</button>
+		
+	</div>
+	</form> 
+<!--	form 태그는submit하기때문에 -->
+	<script>
+//	const loginForm = document.querySelector.('#login-form') //querySelector은 id명을 명확히 해줘야함.
+//	const loginInput = loginForm.querySelector('input')
+//	const loginInput = loginForm.querySelector('button')
+		const loginInput = document.querySelector('#login-form input')
+		const loginButton = document.querySelector('#login-form button')
+		const loginForm = document.querySelector('#login-form')
+		
+		function onLoginSubmit(tomato){
+			tomato.preventDefault();//브라우저가 기본적으로 하는 일 을 막아줌.
+//			const value = loginInput.value;
+			console.log(tomato)
+		}
+		loginForm.addEventListener("submit",onLoginSubmit)
+		
+	</script>
+</body>
+</html>

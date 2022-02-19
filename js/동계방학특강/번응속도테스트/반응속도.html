@@ -1,0 +1,98 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>반응속도</title>
+    <style>
+    #screen {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    user-select: none;
+    }
+    #screen.waiting {
+      background-color: aqua;
+    }
+    #screen.ready {
+      background-color: red;
+      color: white;
+    }
+    #screen.now {
+      background-color: greenyellow;
+    }
+    </style>
+  </head>
+  <body>
+   	
+    <div id="screen" class="waiting">클릭해서 시작하세요</div>
+    <div id="result"></div>
+    <script>
+			
+			let startTime = 0;
+			let endTime = 0;
+			let timeoutId;
+			const records =[];
+			// id = $ 
+      const $screen = document.querySelector('#screen');
+      const $result = document.querySelector('#result');
+			// DOM객체명.classList.contains(문자열)
+			// 문자열이 리스트에 있으면 true
+			// DOM객체명 (태그객체, element객체).classList
+			// 배열의 includes()와 강은 역할임.
+			// DOM객체명.classList에 데이터 추가/삭제/수정
+			// DOM객체명.classList.add(문자열);//추가
+			// DOM객체명.classList.remove(문자열);//삭제
+			// DOM객체명.classList.replace(문자열1,문자열2);//수정 1을 2로 바꾼다.
+			
+      $screen.addEventListener('click',function(){
+        if($screen.classList.contains('waiting')){
+					//대기화면
+					//1. 빨간색 화면으로 전환
+					$screen.classList.remove('waiting');
+					$screen.classList.add('ready');
+					
+					//2. 랜덤 타이머 실행(2000~3000밀리초)
+					// Math.floor(Math.random(*(m-n)+n))
+					timeoutId = setTimeout(function(){
+						startTime = new Date();
+						$screen.classList.remove('ready');
+						$screen.classList.add('now');
+						$screen.textContent = '클릭하세요';//textContent는 텍스트를 엘리먼트에 추가할때 사용한다
+					}, Math.floor(Math.random() *1000)+2000);// 2000~3000사이의 수
+					
+        }else if($screen.classList.contains('ready')){
+          //준비
+					
+//				clearTimeout(timerId);
+//				$screen.classList.replace('ready','waiting');
+//				$screen.textContent = '너무 성급했어.';
+					$screen.classList.remove('ready');
+					$screen.classList.add('waiting');
+      		$screen.textContent = '너무 성급하시군요!';
+					
+				}else if($screen.classList.contains('now')){
+          //클릭화면
+					// Date객체
+					// 생성: new Date(); 현재 시간을 기준으로 생성
+					// 주의사항 : month(월)의 값은 0부터 시작한다. 지정한 월의 +1월로 나타남.
+					
+					endTime = new Date();
+					const currentTime = endTime - startTime;
+					records.push(currentTime);
+					const avg = records.reduce((a,c) => a+c,0)/records.length;
+					// 반복문으로 평균값 구하기. 배열의 매서드 사용
+					// 배열객체명.reduce(콜백함수, 초깃값);
+					// 콜백함수명 = (누적값,현재 원소값) =>{return 새로운 누적값;}
+					
+					$result.textContent = `현재 ${currentTime}ms,평균: ${avg}ms입니다.`
+//					$screen.classList.replace('now','waiting');
+					$screen.classList.remove('ready');
+					$screen.classList.add('waiting');
+					$screen.textContent = '클릭해서 시작하시오.'
+					startTime = null;
+					endTime = null;
+        }
+      })
+    </script>
+  </body>
+  </html>

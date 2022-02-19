@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>틱택토게임</title>
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+		td{
+			border: 1px solid black;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<!--
+	<table>
+		<tr>
+			<td id='td00'></td>
+			<td id='td01'>X</td>
+			<td id='td02'></td>
+		</tr>
+		<tr>
+			<td id='td10'></td>
+			<td id='td11'>O</td>
+			<td id='td12'></td>
+		</tr>
+		<tr>
+			<td id='td20'></td>
+			<td id='td21'>O</td>
+			<td id='td22'>X</td>
+		</tr>
+		
+	</table>
+-->
+	<script>
+		const {body} = document;
+		let rows = [];
+		let turn = 'O'
+		// const body = document.querySeelector('body);
+		// 구조분해 할당(destructuring assignment)
+		// const body = document.body; 변수의 이름과 속성의 이름이 같으면 구조분해가 가능하다.
+		// document객체중 body객체를 가져오세요.
+		/*
+		 const obj = {
+		 a: 'hello',
+		 	b: {
+		 		c:'hi',
+		 		d:{e:'wow'}
+		 	}
+		 }
+		 const {a,b:{c,d:{e}}} = obj;
+		*/
+		
+		const $table = document.createElement('table');
+		//table element 객체(DOM객체, 태그객체)
+		//==<table></table>
+		
+		const $result = document.createElement('div'); //결과창
+		// <div></div>
+		
+		const onClickCallback = (event) =>{
+			if(event.target.textContent === ''){
+				//빈칸
+				console.log('빈칸');
+				event.target.textContent=turn;
+				turn = (turn === 'O'?'X':'O');
+//				const hasWinner = checkWinner()
+				console.log('target' , event.target);
+				console.log('currentTarget',event.currentTarget);
+			}else{
+				console.log('빈칸 아님');
+			}
+		}
+		
+		for(let i = 0; i<3; i++){			//tr태그 작성
+			
+			const $tr = document.createElement('tr');
+			const cells = [];
+			for(let j=0; j<3; j++){			//td태그 작성
+				
+				const $td = document.createElement('td');
+				$td.addEventListener('click',onClickCallback);
+				$tr.appendChild($td);
+				cells.push($td);
+			}
+			$table.appendChild($tr);
+			rows.push(cells);
+			// <table><tr><td></td><td></td><td></td></tr></table>
+//			body.appendChild($table);
+//			body.appendChild($result)
+			
+			body.prepend($table,$result)
+			// append-뒤에 붙이기, prepend-앞에 붙이기
+		}
+	</script>
+</body>
+</html>

@@ -5,7 +5,7 @@ function Item(title,price){
     this.title = title;
     this.price = price;
     this.showprice = function(){
-        console.log(`가격은 ${price}원 입니다.`);
+        console.log(` ${title}의 가격은 ${price}원 입니다.`);
     }
     //return this;
 }

@@ -6,7 +6,7 @@ var name2 = 'siri'; // 선언이 다시 되어도 재선언 가능.
 let kane = 'kane';
 let kane2 = 'kane'; // error
 
-//var는 호이스팅으로 선언 전에 사용이 가능하다. 다만 name이라는 변수만 호이스팅되지 값은 호이스팅되지 않음
+//var는 호이스팅으로 선언 전에 사용이 가능하다. 다만 name이라는 변수만 호이스팅되고 값은 호이스팅되지 않음
 
 // ex
 
@@ -37,6 +37,6 @@ name4 = mike;
 var age4;
 age4 = 30;
 
-// const gender5; // error
+const gender5; // error
 gender5 = 'male'; // Error 선언만하고 초기화, 할당이 따로되었기 때문이다.
 

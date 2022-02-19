@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>끝말잇기게임</title>
+</head>
+<body>
+	<div><span id="order">1</span>번째 참가자</div>
+    <div>제시어: <span id="word"></span></div>
+    <input tpye = 'text'>
+    <button>입력</button>
+    <button class="hello">버튼2</button>
+    <button class="hello">버튼3</button>
+	<script>
+//		const number = prompt('몇명이 참가하나요?');
+//		const realNumber = Number(number);
+//		console.log('number :', realNumber)
+//		console.log(typeof realNumber)
+//		
+//		
+//		
+//		const $button = document.querySelector('button');
+//		console.log($button)
+//		
+//		const $$button = document.querySelectorAll('button');
+//		console.log($$button)
+//		// 
+//								
+//		const $buttons = document.querySelectorAll('.hello');
+//		console.log($buttons)
+//		// .은 전체 클래스 선택자.
+//		
+//		const onClickButton = () => {
+//			console.log('버튼 클릭');
+//		};
+//		
+//		$button.addEventListener('click' , onClickButton)
+//		// onClickButoon은 리스너 함수
+//		// click은 이벤트 이름.
+//		// 콜백함수의 특징은 특정 작업 실행 후 추가로 실행되는 함수
+//		
+//		const onInput = (event) => {
+//			console.log('글자 입력',event.target.value);
+//		}
+//		const $input = document.querySelector('input');
+//		console.log($input)
+//		$input.addEventListener('input',onInput);
+		const number = Number(prompt('몇명이 참가하나요?'))
+		const $button = document.querySelector('button');
+		const $input = document.querySelector('input');
+		const $word = document.querySelector('#word');
+		
+		let word; //제시어
+		let newWord // 현재단어
+		$input.value = '';
+		$input.focus();
+		const onclickButton = () =>{
+			if(!word||word[word.length -1 ] === newWord[0]){
+				//비어있다
+				word = newWord;
+				$word.textContent = word;
+			}else{
+				//비어있지 않다.
+				if( word[word.length -1] === newWord[0]){
+					//올바르다
+					word = newWord;
+					$word.textContent = word;
+				}else{
+					alert('올바르지 않은 단어입니다.')
+				}
+			}
+		}
+		
+		const onInput = (event) =>{
+//			console.log('글자 입력', event.target.value);
+			newWord = event.target.value; // 입력하는 단어를 현재 단어로
+		};
+		
+		$button.addEventListener('click',onclickButton);
+		$input.addEventListener('input',onInput);
+		
+		
+	</script>
+</body>
+</html>

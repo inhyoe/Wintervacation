@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>whatFile</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+	<div id = 'login-form'>
+	<input value = '1233123' type="text" placeholder = 'What is your name?'>
+	<button>Log In</button>
+		
+	</div>
+	<script>
+//	const loginForm = document.querySelector.('#login-form') //querySelector은 id명을 명확히 해줘야함.
+//	const loginInput = loginForm.querySelector('input')
+//	const loginInput = loginForm.querySelector('button')
+		const loginInput = document.querySelector('#login-form input')
+		const loginButton = document.querySelector('#login-form button')
+		
+		function handLoginBtnClick(){
+			console.log('hello', loginInput.value)
+//			console.log(loginInput)
+//			console.dir(loginInput)
+//			console.dir(loginInput.value)
+//			console.log('click')
+		}
+		loginButton.addEventListener('click',handLoginBtnClick);
+	</script>
+</body>
+</html>

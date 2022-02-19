@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /*css*/
+       .mybtn{
+           background-color: rgb(214, 205, 192);
+           
+       }; 
+     
+    </style>
+</head>
+
+    <body>
+        <div>1<span id="order">번째 참가자</span></div>
+        <div>제시어:<span id="word"></span></div>
+        <input type="text">
+        <button>입력</button>
+        <button class = 'mybtn'>입력1</button>
+        <button class = 'mybtn'>입력2</button>
+        <button>입력3</button>
+        
+        
+        <Script>
+            // DOM: Document of Model
+            // 웹브라우저의 자바스크립트 엔진에서 html을 다루기 위한 라이브러리 명.
+            // html을 분석 -> tree로 관리
+            // parent : 부모
+            // child : 자식
+            // sibling : 형제
+            // offspring : 자손
+            // html : 문서의 구조
+            // css : 문서의 디자인
+            // js : 문서의 동작 변경.
+            
+        </Script>    
+        <script>
+            //js 코드
+            /*
+                1. 사용의 입력을 받기
+                  - prompt(안내문구)
+                    - 반환값은 사용자의 입력 문자열
+                  - confirm(안내문구)
+                    - 반환값이 true or false
+                  - alert(경고문구)
+            */
+            const number = prompt('몇명이 참가하나요?');
+            const numPlayer = Number(number);
+            console.log(document.querySelector('input'));
+            console.log(document.querySelector('#order'));
+            console.log(document.querySelector('.mybtn'));
+            console.log(document.querySelector('button'));
+            
+           // <!-- alert(number + typeof(number)); -->
+           /*
+           DOM처리 Document객체 - 모든 태그를 포함
+           -html 문서 객체
+           3. 특정 태그 선택하기
+           document.getElementById() - 요소찾기
+           docuemnt.querySelector(선택자)
+           매개변수 : 선택자 - CSS 선택자 유사
+             - 태그명
+             - #id
+             - .클래스명
+             - 태그의 클래스 선탥자.
+             - 태그명 > 선택자 : 자식
+             - 태그명 선택자 : 자손
+             - 태그명 + 선택자. : 형제 
+            반환값: 선택한 태그객체
+           
+           */
+           const $input = document.querySelector('input');
+           const $button = document.querySelector('button');
+           const $order = document.querySelector('#order');
+           const $word = document.querySelector('#word'); 
+           let word;
+           let newWord;
+           /*
+            이벤트 처리
+            Event " 시건. 컴퓨터에서 일어나는 모든 것은 이벤트"
+                    프로그래머가 다룰 수 있는 것과 그렇지 않는 것.
+                      클릭, 마우스 움직임 ,키보드 입력, 등등
+                    그렇지 않은것
+                    Dom객체에 이벤트 처리하도록 코딩:
+                    Handler 용어를 사용함 그러나 현재는 Listner 많이 씀
+                    DOM객체명.addEvventListner(
+                        이벤트명, 'click', 'mousedpwm', 'mouserover'
+                        이벤트 리스너 함수명
+                    );
+                    이벤트 리스너 함수명 : callback()함수 사용.
+                    callbadk 특정 작업후 추가로 실행되는 동작 
+                    호출 뒤에서 .... 자바스크립트 엔진
+                    프로그래머가 호출하는게 아님
+           */
+        const onclickButton = ()=>{
+            console.log('버튼 클릭 했음');
+            if(word){
+                //첫번째 사용자 이후 사용자.
+                // word의 마지막 문자와 newWord의 첫글자 비교
+                // 문자열 : string
+                // 문자의 배열로 인지
+                // --> 인덱스 사용가능 , length 사용가능.
+                // word의 마지막 문자 : word[word.length-1]
+                // newWord의 첫글자 : newWord[0]
+                if(word[word.length-1] === newWord[0]){
+                    word = newWord;
+                    $word.textContent = word
+                }else{
+                    console.log("잘못 입력했습니다.");
+                    alert('잘못입력')
+                }
+            }else{
+                word = newWord;
+                $word.textContent = word;
+                //첫번째 사용자
+                //$word.textcontent
+             }
+        }
+        
+        $button.addEventListener('click',onclickButton);
+        const onInput= (event)=>{
+            console.log('입력한 글자: ', event.target.value);
+           
+            // 이벤트가 발생한 목적지 태그 정보: event.target객체
+            // event.target의 객체가 input, select, textarea 태그
+            // 객체라면 value값으로 내용을 읽고, 쓰기 가능하다.
+        };
+        $input.addEventListener('input',onInput);
+        </script>
+    </body>
+</html>
+
+    <div id="row">
+        <button class ="num_7">7</button>
+        <button class ="num_8">8</button>
+        <button class ="num_9">9</button>
+        <button class ="plus">+</button>
+    </div>
+    <div id="row">
+        <button class ="num_4">4</button>
+        <button class ="num_5">5</button>
+        <button class ="num_6">6</button>
+        <button class ="minus">-</button>
+    </div>
+    <div id="row">
+        <button class ="num_1">1</button>
+        <button class ="num_2">2</button>
+        <button class ="num_3">3</button>
+        <button class ="divide">/</button>
+    </div>
+    <div id="row">
+        <button class ="clear">C</button>
+        <button class ="num_0">0</button>
+        <button class ="equal">=</button>
+        <button class ="multiply">*</button>
+    </div>
