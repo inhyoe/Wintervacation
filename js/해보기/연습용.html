@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .div{
+            /* float : left;
+            position: absolute;
+            top : 50%;
+            left : 50%;
+            width: 200px;
+            height: 200px;
+            transform: translate(-50%,-50%); */
+            float : left;
+            border: 2px solid #000;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+      
+
+        #slider-one{
+            
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+        #slider-two{
+            
+            background-color: gray;
+            width: 200px;
+            height: 200px;
+        }
+        #slider-three{
+            
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+       <div id="slider-one" >    </div>
+        <div id="slider-two">    </div>
+        <div id="slider-three">  </div>
+    </div>
+    <div></div>
+    <script>
+        
+        const slider_one = document.querySelector('.slider-one');
+        const slider_two = document.querySelector('.slider-two');
+        const slider_three = document.querySelector('.slider-three');
+        let isMouseDown = false
+        let startX
+        let nowX
+        
+        // slider_one.addEventListener('mousedown',)
+
+        function slide(){
+            startX = slider_one.offsetX - slider_one.offsetLeft;
+        }
+        // function check(){
+        //     if(startX >= )
+        // }
+        //만들기 위해서는 
+    </script>
+</body>
+</html>

@@ -15,11 +15,8 @@
 <input required maxlength="15" type="text" placeholder = 'What is your name?'/>
 	</form> 
 	<h1 id = 'greeting' class = 'hidden'></h1>
-<a href = "https://nomadcorders.co.kr">Click Here</a>
 	<script>
-		
-		
-		const link =document.querySelector('a')
+
 		const loginInput = document.querySelector('#login-form input')
 		const loginForm = document.querySelector('#login-form')
 		const greeting = document.querySelector('#greeting')
@@ -27,22 +24,17 @@
 
 		function onLoginSubmit(tomato){
 			event.preventDefault();
-			loginForm.classList.add(HIIDEN_CLASSNAME);
+			loginForm.classList.add(HIIDEN_CLASSNAME); //classname을 추가하기.
 			const username = loginInput.value
+			localStorage.setItem("username",username);
 			console.log(username)
 			greeting.innerText = `Hello ${username}`;
 			greeting.classList.remove(HIIDEN_CLASSNAME)
 		}
 		
-		function handleLinkClick(event){
-			event.preventDefault(); // 기본 동작을 막고있음.
-			console.log(event)
-//			alert('clicked') // <<-- Blocked EveryThing
-			
-		}
 		loginForm.addEventListener('submit',onLoginSubmit)
-		link.addEventListener('click',handleLinkClick)
 		
+		// 로컬스토리지에 저장하는법 localStorage.setItem(key,value);
 //		handleLinkClick( information about the event thatr just happend)
 	</script>
 </body>
