@@ -4,6 +4,8 @@ const loginInput = document.querySelector('#login-form input')
 		const HIIDEN_CLASSNAME = 'hidden'
         const USERNAME = 'username'
         
+        const saveUserName= localStorage.getItem(USERNAME); // localStorage는 작은 DB
+
 		function onLoginSubmit(tomato){
             const username = loginInput.value    
 			event.preventDefault(); // 브라우저의 기본 동작을 막는다
@@ -11,16 +13,12 @@ const loginInput = document.querySelector('#login-form input')
 			localStorage.setItem(USERNAME,username);  // localStorage에 유저의 이름을 추가하기
             paintGreeting(username) // 
 		}
-		
-		loginForm.addEventListener('submit',onLoginSubmit)
-
-        const saveUserName= localStorage.getItem(USERNAME); // localStorage는 작은 DB
-        console.log(saveUserName);
-        
-        function paintGreeting(username){
+		function paintGreeting(username){
             greeting.classList.remove(HIIDEN_CLASSNAME); // 클래스이름인 hidden을 없애기
             greeting.innerText =`Hello ${username}`; // id 이름이 greeting인 것에 텍스트를 추가하기.
         }
+
+		loginForm.addEventListener('submit',onLoginSubmit)
 
         if (saveUserName === null){
             loginForm.classList.remove(HIIDEN_CLASSNAME); 
