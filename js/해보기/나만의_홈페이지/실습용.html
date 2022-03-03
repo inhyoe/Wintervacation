@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 홈페이지</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .background{
+            display: flex;
+            background-color: mediumblue;
+            color: white;
+            height: 40px;
+            padding-top: 20px;
+            justify-content: space-between;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #title{
+            padding-left: 12px;
+        }
+        li{
+            list-style: none;
+        }
+        #imog{
+            display: flex;
+        }
+        #imog li{
+            padding-left: 10px;
+        }
+        i{
+            padding-left: px;
+        }
+        #nav_bar li a{
+            padding: 8px 12px;
+        }
+        #nav_bar li a:hover{
+            background-color: orange;
+            border-radius: 12px;
+        }        
+    </style>
+</head>
+<body>
+    <nav class = 'background'>
+        <div id = 'title'>홈페이지 타이틀</div>
+        <div id="nav_bar">
+            <li><a href="#">HOME</a>
+                <a href="#">GALLERY</a>
+                <a href="#">WEDDING</a>
+                <a href="#">FAQ</a>
+                <a href="#">BOOKINGS</a></li>
+        </div>
+        <script src="https://kit.fontawesome.com/16d8285284.js" crossorigin="anonymous"></script>
+        <ul id = 'imog'>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-facebook"></i></li>
+        </ul>
+    </nav>
+</body>
+</html>

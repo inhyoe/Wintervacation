@@ -1,0 +1,39 @@
+#main{
+    position: relative;
+}
+
+#main ul{
+    list-style: none;
+    margin-top: 10px;
+    
+}
+#main>.uldiv>ul>li{
+    margin-top: 5px;
+    position: relative;
+    text-align: left;
+    left: 0;
+    top: 0;
+    font-size: 13px;
+    
+}
+#main>.uldiv2>ul>li{
+    margin-top: 5px;
+    position: relative;
+    text-align: left;
+    left: 0;
+    top: 0;
+    font-size: 13px;
+    
+}
+#date{
+    
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.h4{
+    text-align:left;
+    padding: 10px;
+    border-bottom: 2px solid black;
+}

@@ -11,6 +11,7 @@ a{
     align-items: center;
     background-color: rgb(43, 17, 114);
     padding: 8px 12px;
+    
 }
 
 .navbar_logo{
@@ -24,6 +25,30 @@ a{
     list-style: none;
     padding-left: 0;
 }
+
+.navbar_menu li:hover{
+    background-color: #d49466;
+    border-radius: 4px;
+}
 .navbar_menu li{
     padding: 8px 12px;
+}
+
+.navbar_icons{
+    list-style: none;
+    color : white;
+    display: flex;
+}
+.navbar_icons li{
+    padding: 8px 12px;
+}
+
+@media screen and (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar_menu{
+        flex-direction: column;
+    }
 }

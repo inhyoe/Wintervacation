@@ -19,14 +19,16 @@ button{
     display: flex;
     position: relative;
     height: 400;
-   /* left : -640px */
+    /* left: -640px; */
 }
 img{
     width:640px
 }
 button, button:active button:focus{
     width: 100px;height: 30px;border: none;
-    color: white; background-color: teal;outline: none;
+    color: white;
+    background-color: teal;
+    outline: none;
 }
 button:hover{
     background-color: turquoise;

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      * {
+         margin: 0;
+         /* bottom: 0; */
+         padding: 0;
+         text-align: center;
+
+      }
+
+      header {
+         height: 130px;
+         /* border: 1px solid black; */
+      }
+
+      #logo {
+         float: left;
+         margin-top: 50px;
+         margin-left: 40px;
+      }
+
+      #information ul {
+         list-style: none;
+         font-size: 12px;
+         position: relative;
+         left: 240px;
+         top: 20px
+      }
+
+      #information ul li {
+         display: inline;
+         margin-left: 20px;
+      }
+
+      #nav ul {
+         list-style: none;
+         font-weight: bold;
+         position: relative;
+         left: 120px;
+         top: 60px;
+      }
+
+      #nav ul li {
+         display: inline;
+         margin: 30px;
+      }
+
+      main {
+         height: 260px;
+         border-top: 1px solid red;
+
+      }
+
+      aside {
+         float: left;
+         left: 50px;
+         height: 400px;
+         width: 200px;
+         /* border: 1px solid green; */
+      }
+
+      section {
+         float: right;
+         height: 400px;
+         width: 550px;
+         /* border: 1px solid blue; */
+      }
+
+      footer {
+         clear: both;
+      }
+
+      #mainSide {
+         /* border: solid 1px greenyellow; */
+         margin: 0 auto;
+         width: 800px;
+         height: 400px;
+      }
+
+      footer {
+         height: 200px;
+         border: 1px solid yellow;
+      }
+
+      #main_image {
+         background-image: url("./img/main_bg.png");
+         background-position: top center;
+         text-align: center;
+         padding: 200px 0 0 750px;
+         height: 300px;
+         box-sizing: border-box;
+      }
+   </style>
+   <link rel="stylesheet" href="sidebar.css">
+   <link rel="stylesheet" href="section.css">
+</head>
+
+<body>
+   <header>
+      <div id='logo'>
+         <img src="./img/logo.png">
+      </div>
+      <div id='information'>
+         <ul>
+            <li>유창훈님</li>
+            <li>|</li>
+            <li>로그아웃</li>
+            <li>|</li>
+            <li>정보수정</li>
+         </ul>
+      </div>
+      <div id='nav'>
+         <ul>
+            <li>Home</li>
+            <li>출석부</li>
+            <li>작품갤러리</li>
+            <li>게시판</li>
+         </ul>
+      </div>
+
+   </header>
+   <main id='main_image'>
+      <a href="#">
+         <div><img src="./img/btn_class.png">
+         </div>
+      </a>
+   </main>
+
+   <div id='mainSide'>
+      <aside>
+         <ul>
+            <div style="
+               background-color: #0ca9a3;
+               font-size: 20px;
+               font-weight: bold;
+               text-align: left;
+               /* box-sizing: border-box; */
+               padding: 15px;
+               color: white;">The 베이킹</div>
+            <li style="
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: left; 
+            line-height: 120%;
+            font-size: 15px; 
+            list-style: none;">안녕하세요 쿠키와 빵 만들기 정보를 공유하고 소통하는 공간입니다</li>
+            <input type="text" style="vertical-align: top;">
+            <button style="border: solid 1px black;">검색</button>
+            <div style="
+            border-top: solid 3px black;
+            margin-top: 10px;
+            position: relative;
+            border-bottom: solid 1px #cccccc; 
+            ">
+               <h4 style="
+            text-align: left;
+            padding: 10px;
+            ">
+                  베이킹/요리
+               </h4>
+            </div>
+            <ul id='asideLine'>
+               <li>쿠키 만들기</li>
+               <li>빵 만들기</li>
+               <li>마카롱 만들기</li>
+            </ul>
+         </ul>
+      </aside>
+      <section>
+         <div style="
+            float :left;
+            width: 250px;
+         " id='main'>
+            <h4 class="h4"
+            ">알림</h4>
+            <div class = 'uldiv'>
+            <ul>
+               <li>8월 3일 쿠킹클래스 연기합니다
+                  <div id="date">09:30</div>
+               </li>
+               <li>8월 3일 쿠킹클래스 연기합니다
+                  <div id="date">09:30</div>
+               </li>
+               <li>8월 3일 쿠킹클래스 연기합니다
+                  <div id="date">09:30</div>
+               </li>
+               <li>8월 3일 쿠킹클래스 연기합니다
+                  <div id="date">09:30</div>
+               </li>
+               <li>8월 3일 쿠킹클래스 연기합니다
+                  <div id="date">09:30</div>
+               </li>
+            </div>
+            </ul>
+         </div>
+         <div style='
+            clear: both;
+            width: 250px;
+            margin-top: 20px;
+            padding-top: 40px;
+            ' id='main'>
+            <h4 class='h4'>게시판</h4>
+            <div class = 'uldiv2'>
+            <ul>
+               
+               <li>안녕하세요 반갑습니다
+                  <div id="date">09:30</div>
+               </li>
+
+               <li>안녕하세요 반갑습니다
+                  <div id="date">09:30</div>
+               </li>
+               <li>안녕하세요 반갑습니다
+                  <div id="date">09:30</div>
+               </li>
+               <li>안녕하세요 반갑습니다
+                  <div id="date">09:30</div>
+               </li>
+               <li>안녕하세요 반갑습니다
+                  <div id="date">09:30</div>
+               </li>
+            </ul>
+         </div>
+         </div>
+      </section>
+   </div>
+   <footer>
+      푸터
+   </footer>
+</body>
+
+</html>

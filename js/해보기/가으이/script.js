@@ -5,25 +5,61 @@ const IMAGE_WIDTH = 640; // 이만큼 움직인다.
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 const images = document.querySelector(".img");
+makeClone()
 
+function makeClone(){
+    let slide_first = images.firstElementChild.cloneNode(true);
+    let slide_last = images.lastElementChild.cloneNode(true);
+    // images.insertBefore(slide_last,images.firstElementChild);
+    images.append(slide_first);
+}
 function next(){
-    if(curPos<3){
+    if(curPos<4){
         prevBtn.removeAttribute('disabled')
         positionValue = positionValue-IMAGE_WIDTH;
         images.style.transform = `translateX(${positionValue}px)`
+        console.log(positionValue)
         curPos += 1;
         images.style.transition='0.5s ease-out'
-        if(curPos ===3){
-            nextBtn.setAttribute('disabled','true')
-        }
+        console.log(curPos)
+        var change = setTimeout(() => {
+            if(curPos ==4){
+                positionValue =0;
+                console.log(positionValue)
+                images.style.transform = `translateX(${positionValue}px)`
+                images.style.transition='0s ease-out'
+                curPos = 0;
+                
+            }
+            clearTimeout(change)
+        }, 500);
     }
+    
+    
 }
+
+var move = null;
+function lastNext(){
+    
+//     if(curPos ==4){
+//         positionValue =0;
+//         console.log(positionValue)
+//         images.style.transform = `translateX(${positionValue}px)`
+//         images.style.transition='0s ease-out'
+//         curPos = 0;
+//     }
+
+
+// }
+}
+
 
 
 function init(){
     prevBtn.setAttribute('disabled','true')
     nextBtn.addEventListener('click',next)
     prevBtn.addEventListener('click',prev)
+    // nextBtn.addEventListener('click',lastNext)
 };
 
 function prev(){
@@ -47,4 +83,4 @@ function prev(){
 
 prevBtn.addEventListener('click',prev)
 
-init();
+init()

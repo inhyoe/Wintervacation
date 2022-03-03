@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Basic",
+            "request": "launch",
+            "mainClass": "Java.unit6.ex.Basic",
+            "projectName": "Wintervacation_7903868d"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",

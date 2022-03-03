@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+        background-color: #1b9c9e;
+        color: white;
+        height: 250px;
+        margin: 0 auto;
+    }
+        ol{
+            list-style: none;
+            display: inline;
+            
+        }
+        #title{
+            font-weight: bold;
+            
+        }
+        #item{
+            float: left;
+            margin: 50px 50px;
+        }
+        #sitemap{
+            width: 800px;
+            height: 700px;
+            margin: 0 auto;
+            /* 가장 가까운 부모 선택자에게 margin 0 auto값을 할당해야 함. */
+        }
+        #header li{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'header'>
+        <div id="sitemap">
+        <div id="item">
+        <ul>
+            <ol id = 'titles'>
+            <li id ='title'>병원소개</li>
+            <li>인사말</li>
+            <li>병원 네트워크</li>
+            <li>조직도</li>
+            <li>찾아오시는길</li>
+        </ol>
+        </ul>
+    </div>
+    <div id="item">
+        <ul>
+            <ol id = 'titles'>
+            <li id="title">감기 클리닉</li>
+            <li>기침 감기</li>
+            <li>코 감기</li>
+            <li>목 감기</li>
+            <li>몸살 감기</li>
+        </ol>
+        </ul>
+    </div>
+    <div id="item">
+        <ul>
+            <ol id = 'titles'>
+            <li id="title">비염 클리닉</li>
+            <li>알레르기 비염</li>
+            <li>축 농증</li>
+            <li>코막힘 비염</li>
+        </ol>
+        </ul>
+    </div>
+    <div id="item">
+        <ul>
+            <ol id = 'titles'>
+            <li id="title">온라인 상담</li>
+            <li>공지 사항</li>
+            <li>자주하는 질문</li>
+            <li>질문과 답변</li>
+            <li>자료실</li>
+        </ol>
+        </ul>
+    </div>
+</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin : 0;
+            padding: 0;
+        }
+        #section{
+            border: 1px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+        #container{
+            width: 300px;
+            height: 100px;
+            
+        }
+        #firstBox{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        #secondBox{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        #thirdBox{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id = 'section'>
+        <div id = 'container'>
+            <div id = 'firstBox'></div>
+            <div id = 'secondBox'></div>
+            <div id = 'thirdBox'></div>
+            
+        </div>
+        
+    </div>
+    <button id = 'next'>next</button>
+    <script>
+        const container = document.querySelector('#container')
+        const firstBox = document.querySelector('#firstBox')
+        const secondBox = document.querySelector('#secondBox')
+        const thirdBox = document.querySelector('#thirdBox')
+        const next = document.querySelector('#next')
+        let X = 0;
+
+
+        function move(){
+            X -= 100;
+            container.style.transform = `translateX(${X}px)`;
+            container.style.transition = `${0.5}s ease-out`
+            if(X === -300){
+
+            }
+        }
+        
+        next.addEventListener('click',move)
+    </script>
+</body>
+</html>

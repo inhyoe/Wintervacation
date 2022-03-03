@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>텍스트 입력 창</h3>
+    <form><input type="text"></form>
+    <form><input type="password"></form>
+
+    <!-- 라디오박스 -->
+
+    <form>
+        <input type="radio" checked>예
+        <input type="radio">아니오
+    </form>
+
+    <!-- 체크박스 -->
+
+    <form>
+        <input type="checkbox">드라마
+        <input type="checkbox">스포츠
+        <input type="checkbox">뉴스
+        <input type="checkbox" checked>기타
+    </form>
+
+    <!-- 버튼태그 -->
+    <form>
+        <input type="submit" value="저장하기">
+        <input type="button" value="버튼">
+        <input type="reset" value="다시쓰기">
+    </form>
+
+
+    <h3>input 태그의 속성</h3>
+    <form>
+        이름 : <input type="text" value="홍길동"><br>
+        별명 : <input type="text" autofocus><br>
+        아이디 : <input type="text" value="hong" readonly><br>
+        회원레벨 : <input type="text" value="9" readonly disabled><br>
+        전화번호 : <input type="text" placeholder="010-1234-5667">
+    </form>
+    <!-- 선택자 태그 -->
+    <form>
+        이메일 : <input type="text" value="홍길동">@<select>
+            <option>직접입력</option>
+            <option>네이버</option>
+            <option>다음</option>
+            <option>몰라</option>
+            <option>네이트</option>
+            <option>구글</option>
+        </select>
+    </form>
+
+    <!-- 다중 입력창 -->
+    <form>
+        <h3>남기고 싶은 말</h3>
+        <textarea cols="80" rows="10"></textarea>
+    </form>
+
+    <!-- 테이블 삽입 -->
+    
+</body>
+</html>
