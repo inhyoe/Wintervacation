@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>whatFile1</title>
+	<style>
+		.hidden{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+<form id = 'login-form' >
+<input required maxlength="15" type="text" placeholder = 'What is your name?'
+	/
+	>
+	</form> 
+<a href = "https://nomadcorders.co.kr">Click Here</a>
+	<script>
+		
+		
+		const link =document.querySelector('a')
+		const loginInput - document.querySelector('#login-form input')
+		function onLoginSubmit(tomato){
+			event.preventDefault();
+			const username = loginInput.value
+			loginForm.classList.add('hidden');
+			console.log(username)
+		}
+		
+		function handleLinkClick(event){
+			event.preventDefault(); // 기본 동작을 막고있음.
+			console.log(event)
+//			alert('clicked') // <<-- Blocked EveryThing
+			
+		}
+		link.addEventListener('click',handleLinkClick)
+		
+//		handleLinkClick( information about the event thatr just happend)
+	</script>
+</body>
+</html>

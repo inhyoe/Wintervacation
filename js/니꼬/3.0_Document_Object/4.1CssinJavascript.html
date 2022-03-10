@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>what?</title>
+</head>
+<body>
+<div class="shit">
+	<h1>Grap me!</h1>
+
+</div>
+
+	<script>
+		document.title = 'Hi Js';
+		console.log('hi js')
+//		const titles = document.getElementsByTagName('h1') // Array객체 Object객체 x
+		const titles = document.querySelector('.shit h1')// css문법 첫번째것만 선택됨.
+		titles.innerText = 'Got you!' // innerText를 사용한다.
+		
+		
+		
+		function handleTitleClick(){
+			const currentColor = titles.style.color;
+			let newColor; // empty value
+			if(currentColor === 'blue'){
+				newColor = 'tomato'
+			}else{
+				newColor = 'blue';
+				console.log('click')
+			}
+			titles.style.color = newColor;
+		}
+		
+		
+		titles.addEventListener('click', handleTitleClick)
+	</script>
+</body>
+</html>

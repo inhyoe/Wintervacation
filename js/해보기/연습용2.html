@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #box{
+            position: absolute;
+            top : 50%;
+            left : 50%;
+            width: 200px;
+            height: 200px;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+        }
+        #container{         
+            width: 600px;
+            /* transform:translateX(-200px); */
+        }
+        
+        #fuck{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+        #slider-one{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            
+        }
+        #slider-two{
+            
+            background-color: gray;
+            width: 200px;
+            height: 200px;
+            
+        }
+        #slider-three{
+            width: 200px;
+            height: 200px;
+            background-color: beige;
+        }
+        /* #slider-four{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        } */
+
+        #hidden{
+            display: none;
+        }
+
+        .slide{
+            float: left;
+        }
+        .hidden{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id = 'fuck'></div>
+    <button id = 'buttonNext'> next </button>
+    <button id = 'buttonPrevious'> previous </button>
+    <div id="box">
+        
+        <div id = 'container'  >
+        <div class = 'slide' id = 'slider-one'  >  1  </div>
+        <div class = 'slide' id = 'slider-two'>  2  </div>
+        <div class = 'slide' id = 'slider-three'> 3 </div>
+        <!-- <div class="slide" id="slider-four"> 4 </div> -->
+        
+        </div>
+
+    </div>
+    
+    <script>
+        const buttonNext = document.querySelector('#buttonNext')
+        const buttonPrevious = document.querySelector('#buttonPrevious')
+        const hidden = document.querySelector('#hidden');
+        const slide = document.querySelector('.slide');
+        const slider_one = document.querySelector('#slider-one');
+        const slider_two = document.querySelector('#slider-two');
+        const slider_three = document.querySelector('#slider-three');
+        // const slider_four = document.querySelector('#slider-four');
+        const container = document.querySelector('#container')
+        let isMouseDown = false;
+        let startX;
+        let nowX;
+        
+
+
+        // slider_one.addEventListener('mousedown',)
+        
+        //만약 슬라이드를 넘겼을때 2번째 slider_two가 선택이 되어야 하니까
+        
+        buttonNext.addEventListener('click',nextMethod);
+        buttonPrevious.addEventListener('click',previousMethod);
+        
+        let i = 1;
+        let x = 0;
+        function nextMethod(){
+                // slider_one.classList.add('hidden')       // 빨강 삭제
+                // slider_two.classList.remove('hidden'); // 파랑 생성
+                // container.style.transition = "translate(-200)";
+                
+                
+                
+            if(i%3 === 1){
+                //파랑,회색
+                container.style.transform = "translateX(-200px)";
+                container.style.transition = `${0.5}s ease-out`
+                i++;
+                console.log('회색')   //파랑 회색
+            }
+            else if(i%3 ===2){
+                // slider_two.classList.add('hidden');      //회색 삭제
+                // slider_three.classList.remove('hidden')  //베이지 생성
+                container.style.transform = "translateX(-400px)";
+                container.style.transition = `${0.5}s ease-out`
+                console.log('베이지')   
+                i++;
+            }else if(i%3 ==0){
+                // slider_three.classList.add('hidden')     //베이지 삭제
+                // slider_one.classList.remove('hidden')    //파랑 생성
+                container.style.transform = 'translateX(0px)'
+                container.style.transition = `${0.5}s ease-out`
+                console.log('파랑')
+                i++; 
+            }else{
+                container.style.transform = 'translateX(600px)'
+                i = 1;
+            }
+            console.log( 'i =',i);
+        }
+        //19%3 = 1
+        //20%3 = 2
+        //21%3 = 0
+        //transition-delay
+        function previousMethod(){
+            
+            if(i%3 ===2){ //회색에서 파랑
+                container.style.transform = 'translateX(0px)' 
+                container.style.transition = `${0.5}s ease-out`
+                i--;
+            }else if(i%3===0){ // 베이지에서 회색
+                container.style.transform = 'translateX(-200px)'
+                container.style.transition = `${0.5}s ease-out`
+                i--;
+            }else if(i%3===1){
+                container.style.transform = 'translateX(-400px)'
+                container.style.transition = `${0.5}s ease-out`
+                i--;
+            }
+            }
+
+            // container.style.transition="translate(200)"
+            // if(i%3 ===1){
+            //     slider_two.classList.add('hidden')       // 빨강 삭제
+            //     slider_three.classList.remove('hidden'); // 베이지 생성
+            //     i--
+            // }
+            // else if(i%3 ===2){
+            //     slider_one.classList.add('hidden');      //파랑 삭제
+            //     slider_two.classList.remove('hidden')    //빨강 생성
+            //     i--
+            // }else if(i%3 ===0){
+            //     slider_three.classList.add('hidden')     //베이지 삭제
+            //     slider_one.classList.remove('hidden')    //파랑 생성
+            //     i--
+            // }else{
+            //     alert('전단계가 없습니다!')
+            // }
+
+        
+        // function slide(){
+        //     startX = slider_one.offsetX - slider_one.offsetLeft;
+        // }
+        // function check(){
+        //     if(startX >= )
+        // }
+        //만들기 위해서는 1,2,3 4,5,6 7,8,9
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <Style>
+           
+            a:link{ /* 방문 안함 */
+                color :black;
+            }
+            a:visited{/* 방문함 */
+                color : red;
+            }
+            a:hover{ /*마우스 올려놓음*/
+                color:yellow;
+            }
+            a:active{ 
+                color : green;
+            }
+            a:focus{ /* 탭키를 사용하여 focus함. */
+                color : white;
+            }
+            input:focus{
+                background-color: black;
+                color :white
+            }
+        </Style>
+    </head>
+    <body>
+        <a  href ='https://opentutorial.org'>방문함</a>
+        <a  href ='https://a.a'>방문안함</a>
+        <input type="text" id="focus">
+        <!-- https://opentutorials.org/module/2367/13357 <-선택자의 속성 -->
+    </body>
+    </html>

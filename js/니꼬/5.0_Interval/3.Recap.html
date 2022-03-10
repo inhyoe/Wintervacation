@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>whatFile2</title>
+	<link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <form id = 'login-form' class = 'hidden'> 
+        <input required maxlength="15" type="text" placeholder = 'What is your name?'/>
+	</form> 
+	<h2 id="clock"> 00:00 </h2>    
+    <h1 id = 'greeting' class = 'hidden'></h1>
+        
+	<script>
+
+		const loginInput = document.querySelector('#login-form input')
+		const loginForm = document.querySelector('#login-form')
+		const greeting = document.querySelector('#greeting')
+		const HIIDEN_CLASSNAME = 'hidden'
+        const USERNAME = 'username'
+        
+		function onLoginSubmit(tomato){
+            const username = loginInput.value    
+			event.preventDefault(); // 브라우저의 기본 동작을 막는다
+			loginForm.classList.add(HIIDEN_CLASSNAME); // classname을 추가하기.
+			localStorage.setItem(USERNAME,username);  // localStorage에 유저의 이름을 추가하기
+            paintGreeting(username) // 
+		}
+		
+		loginForm.addEventListener('submit',onLoginSubmit)
+
+        const saveUserName= localStorage.getItem(USERNAME); // localStorage는 작은 DB
+        console.log(saveUserName);
+        
+        function paintGreeting(username){
+            greeting.classList.remove(HIIDEN_CLASSNAME); // 클래스이름인 hidden을 없애기
+            greeting.innerText =`Hello ${username}`; // id 이름이 greeting인 것에 텍스트를 추가하기.
+        }
+
+        if (saveUserName === null){
+            loginForm.classList.remove(HIIDEN_CLASSNAME); 
+            loginForm.addEventListener('submit',onLoginSubmit);
+        }else{
+            paintGreeting(saveUserName);
+        }
+	</script>
+    <script>
+        //clock
+        const clock = document.querySelector("h2#clock")
+        function getClock(){
+            let hours = new Date().getHours();
+            let Minutes = new Date().getMinutes();
+            let Seconds = new Date().getSeconds();
+            let realHours = String(hours).padStart(2,"0");
+            let realMinutes = String(Minutes).padStart(2,"0");
+            let realSecond = String(Seconds).padStart(2,"0");
+            // new Date(). ... 는 숫자이기때문에
+            // padStart는 적용되지 않으므로 String형으로 바꾸ㅓ줘야 함.
+            // padStart("문자열의 길이","앞의 대체할 문자열")
+            
+            clock.innerText = `${realHours}:${realMinutes}:${realSecond}`
+        }
+        
+        setInterval(getClock,1000)
+        // setInterval(sayHello,5000) //5초마다 호출
+        // setTimeout(sayHello,5000)  //5초뒤에 호출.
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = './script.js'></script> <!-- 자바스크립트를 불러옴 -->
+    <script>
+        var hw = document.getElementById('hw');
+        hw.addEventListener('click',function(){
+        alert('hello world');
+        })  // id가 hw인것을 찾지 못했기 때문에 에러가 발생한다.
+            // 그렇기 때문에 바디태그 아래에 스크립트 태그에 작성하는 것이 올바름.
+    </script>
+</head>
+<body>
+    <input type="button" value="Hello world" id="hw">
+   
+    <script> // 스크립트 태그까지는 html 문법
+       
+        // script 태그 안쪽부터는 자바스크립트 적용.
+    </script>
+</body>
+</html>
+<!-- 실행이 되지 않는 이유는  -->

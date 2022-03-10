@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel ='stylesheet' href ='main.css'> <!-- //css파일 첨부하는 방법 -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="alert-box" id = alert>
+    <p> 아이디를 입력 안했음</p>
+    <button onclick= "나는나비('none')" > 닫기</button>
+</div>
+    <button onclick="나는나비('block') "> 버튼1 </button>
+    
+    <div class="alert2-box" id = alert2>
+        <p>비밀번호를 입력안했음</p>
+    <button onclick="나는나비2('none')">닫기</button>   
+    </div>
+    <button onclick="나는나비2('block')">버튼2</button>
+<script>
+   function 나는나비(뭐쓸거){
+    document.getElementById('alert').style.display = 뭐쓸거;
+   }
+   function 나는나비2(뭐쓸거){
+       document.getElementById('alert2').style.display = 뭐쓸거;
+   }
+</script>
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>what?</title>
+	<style>
+		body{
+			background-color: beige;
+		}
+		h1{
+			color: cornflowerblue;
+			transition: color 0.4s ease-in-out;
+		}
+		.active{
+			color:tomato;
+		}
+		.sexy-font{
+			color: royalblue;
+		}
+	</style>
+</head>
+<body>
+<div class="shit">
+	<h1 class = 'sexy-font'>Grap me!</h1>
+
+</div>
+
+	<script>
+
+		const titles = document.querySelector('.shit h1')// css문법 첫번째것만 선택됨.
+		titles.innerText = 'Clicked Me!' // innerText를 사용한다.
+		
+//		function handleTitleClick(){
+//			
+//			const clickedClass = 'clicked'
+//			if(titles.classList.contains(clickedClass)){
+////			titles.className = ""
+//				titles.classList.remove(clickedClass);
+//			}
+//			else{
+////			titles.className = clickedClass;	
+//			titles.classList.add(clickedClass);
+//			}
+//			
+////			console.log(titles.className);
+////			titles.classList.toggle("clicked");
+//		}
+				function handleTitleClick(){
+			console.log(titles.clickedClass)
+			titles.classList.toggle('clicked')
+		}
+
+		titles.addEventListener('click',handleTitleClick)
+		
+		
+	</script>
+</body>
+</html>
