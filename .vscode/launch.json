@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Has_A관계",
+            "request": "launch",
+            "mainClass": "Has_A관계",
+            "projectName": "Wintervacation_7903868d"
+        },
+        {
+            "type": "java",
             "name": "Launch Basic",
             "request": "launch",
             "mainClass": "Java.unit6.ex.Basic",
